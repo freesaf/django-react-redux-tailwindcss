@@ -1,0 +1,39 @@
+{
+  "name": "djangoreact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run watch:css && npm run dev",
+    "build": "npm run build:css && npm run initbuild",
+    "dev": "webpack --mode development --watch ./djreact/frontend/src/index.js --output ./djreact/frontend/static/frontend/main.js",
+    "initbuild": "webpack --mode production ./djreact/frontend/src/index.js --output ./djreact/frontend/static/frontend/main.js",
+    "watch:css": "postcss ./djreact/frontend/src/styles/tailwind.css -o ./djreact/frontend/static/frontend/css/main.css",
+    "build:css": "postcss ./djreact/frontend/src/styles/tailwind.css -o ./djreact/frontend/static/frontend/css/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.7.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@reach/router": "^1.3.4",
+    "axios": "^0.19.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.11.0",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
+  }
+}
