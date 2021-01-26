@@ -1,11 +1,13 @@
 import React from "react";
-import { Router } from "@reach/router";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Test from "./Test";
 
 export default function App() {
   return (
     <Router>
-      <Test />
+      <Switch>
+        <Test />
+      </Switch>
     </Router>
   );
 }
